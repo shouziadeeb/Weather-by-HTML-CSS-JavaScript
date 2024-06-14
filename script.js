@@ -24,7 +24,7 @@ async function checkWeather(cityName) {
   if (data.cod == 404) {
     document.querySelector(".weather").style.display = "none";
     document.querySelector(".invalid_mssg").style.display = "block";
-    BackgrounVideo.src= "";
+    BackgrounVideo.src = "";
     return;
   }
   city.innerHTML = data.name;
@@ -34,20 +34,20 @@ async function checkWeather(cityName) {
   windspeed.innerHTML = data.wind.speed + " km/h";
 
   if (data.weather[0].main == "Clouds") {
-    weather_icon.src = "cloudsun.png";
-    BackgrounVideo.src = "istockphoto-1355532687-640_adpp_is.mp4";
+    weather_icon.src = "Images/cloudsun.png";
+    BackgrounVideo.src = "Videos/istockphoto-1355532687-640_adpp_is.mp4";
   }
   if (data.weather[0].main == "Haze") {
-    weather_icon.src = "clearcloud.png";
-    BackgrounVideo.src = "hazevideo.mp4";
+    weather_icon.src = "Images/clearcloud.png";
+    BackgrounVideo.src = "Videos/hazevideo.mp4";
   }
   if (data.weather[0].main == "Rain") {
-    weather_icon.src = "rain.png";
-    BackgrounVideo.src = "rainvideo.mp4";
+    weather_icon.src = "Images/rain.png";
+    BackgrounVideo.src = "Videos/rainvideo.mp4";
   }
   if (data.weather[0].main == "Clear") {
-    weather_icon.src = "sun.png";
-    BackgrounVideo.src = "clearWeather.mp4";
+    weather_icon.src = "Images/sun.png";
+    BackgrounVideo.src = "Videos/clearWeather.mp4";
   }
   document.querySelector(".weather").style.display = "block";
   document.querySelector(".invalid_mssg").style.display = "none";
