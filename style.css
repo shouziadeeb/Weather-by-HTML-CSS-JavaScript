@@ -6,20 +6,22 @@
 }
 body {
   background-color: black;
-  /* background: url(istockphoto-1355532687-640_adpp_is.mp4); */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card {
-  width: 90%;
-  max-width: 470px;
-  position: fixed;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%);
-  opacity: 1;
-  margin: 100px auto 0;
+  min-width: 300px;
+  height: 90vh;
+  z-index: 1;
   border-radius: 20px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
   padding: 40px 30px;
   color: aliceblue;
   background: linear-gradient(#1a3a31, #5b548a);
@@ -29,6 +31,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 .searchBar input {
   border: 0;
@@ -40,6 +43,31 @@ body {
   flex: 1;
   margin-right: 16px;
   font-size: 18px;
+}
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: #1a3a31;
+  width: 70%;
+  background: white;
+  border: none;
+  border-top: none;
+  max-height: 150px;
+  overflow-y: auto;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.suggestions::-webkit-scrollbar {
+  display: none;
+}
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+.suggestion-item:hover {
+  background: #f0f0f0;
 }
 .searchBar button {
   border: 0;
@@ -58,12 +86,19 @@ body {
 .searchbtn:hover {
   box-shadow: 0px 0px 10px;
 }
+.weather {
+  display: grid;
+  place-items: center;
+}
 .weather-icon {
   width: 170px;
   margin-top: 30px;
 }
 .weather h1 {
   font-size: 60px;
+}
+.temp {
+  cursor: pointer;
 }
 .weather h2 {
   font-size: 45px;
@@ -106,4 +141,53 @@ body {
   right: 0;
   bottom: 0;
   margin-top: 15px;
+}
+.tempContainer{
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+
+}
+/* .switch_btn {
+  width: 150px;
+  border: 0.3px solid rgba(255, 255, 255, 0.205);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 3px 5px;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+} */
+.toggle_text {
+  font-size: 14px;
+  font-weight: 100;
+}
+#toggleBtn {
+  width: 40px;
+  height: 25px;
+  padding: 4px 8px;
+  font-size: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: 0.3s;
+  margin-bottom: 11px;
+}
+.active {
+  background-color: #28a745;
+}
+
+@media (max-width: 600px) {
+  .card {
+    min-width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 0;
+  }
+  .Background_video {
+    display: none;
+  }
 }
