@@ -16,8 +16,8 @@ const apiUrl =
 
 let data;
 
-let isCelsius = true; 
-toggleBtn.textContent = "°F"
+let isCelsius = true;
+toggleBtn.textContent = "°F";
 
 toggleBtn.addEventListener("click", function () {
   let temp_In_C = data?.main?.temp;
@@ -26,7 +26,7 @@ toggleBtn.addEventListener("click", function () {
   toggleBtn.classList.toggle("active", isCelsius);
   temp.innerHTML = isCelsius
     ? Math.round(temp_In_C) + "°C"
-    : Math.round(temp_In_C) * 9/5 + 32 + "°F";
+    : (Math.round(temp_In_C) * 9) / 5 + 32 + "°F";
 });
 window.onload = () => {
   if ("geolocation" in navigator) {
@@ -108,6 +108,86 @@ const indianStatesAndUTs = [
   "Puducherry",
   "Jammu and Kashmir",
   "Ladakh",
+  "Mumbai",
+  "Delhi",
+  "Bangalore",
+  "Hyderabad",
+  "Ahmedabad",
+  "Chennai",
+  "Kolkata",
+  "Surat",
+  "Pune",
+  "Jaipur",
+  "Lucknow",
+  "Kanpur",
+  "Nagpur",
+  "Indore",
+  "Thane",
+  "Bhopal",
+  "Visakhapatnam",
+  "Patna",
+  "Vadodara",
+  "Ghaziabad",
+  "Ludhiana",
+  "Agra",
+  "Nashik",
+  "Faridabad",
+  "Meerut",
+  "Rajkot",
+  "Kalyan-Dombivli",
+  "Vasai-Virar",
+  "Varanasi",
+  "Srinagar",
+  "Aurangabad",
+  "Dhanbad",
+  "Amritsar",
+  "Navi Mumbai",
+  "Allahabad",
+  "Howrah",
+  "Gwalior",
+  "Jabalpur",
+  "Coimbatore",
+  "Vijayawada",
+  "Jodhpur",
+  "Madurai",
+  "Raipur",
+  "Kota",
+  "Chandigarh",
+  "Guwahati",
+  "Solapur",
+  "Hubli–Dharwad",
+  "Bareilly",
+  "Moradabad",
+  "Mysore",
+  "Tiruchirappalli",
+  "Tiruppur",
+  "Gurgaon",
+  "Aligarh",
+  "Jalandhar",
+  "Bhubaneswar",
+  "Salem",
+  "Warangal",
+  "Mira-Bhayandar",
+  "Thiruvananthapuram",
+  "Bhiwandi",
+  "Saharanpur",
+  "Guntur",
+  "Amravati",
+  "Bikaner",
+  "Noida",
+  "Jamshedpur",
+  "Bhilai",
+  "Cuttack",
+  "Firozabad",
+  "Kochi",
+  "Nellore",
+  "Bhavnagar",
+  "Dehradun",
+  "Durgapur",
+  "Asansol",
+  "Rourkela",
+  "Nanded",
+  "Kolhapur",
 ];
 let con = false;
 
