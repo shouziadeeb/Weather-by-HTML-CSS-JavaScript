@@ -32,6 +32,7 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  gap: 5px;
 }
 .searchBar input {
   border: 0;
@@ -77,9 +78,9 @@ body {
   height: 60px;
   cursor: pointer;
 }
-.searchBar button i {
+/* .searchBar button i {
   width: 16px;
-}
+} */
 .searchBar input:hover {
   box-shadow: 3px 6px 10px;
 }
@@ -142,23 +143,12 @@ body {
   bottom: 0;
   margin-top: 15px;
 }
-.tempContainer{
+.tempContainer {
   display: flex;
   align-items: flex-end;
   gap: 10px;
-
 }
-/* .switch_btn {
-  width: 150px;
-  border: 0.3px solid rgba(255, 255, 255, 0.205);
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  padding: 3px 5px;
-  justify-content: center;
-  gap: 5px;
-  cursor: pointer;
-} */
+
 .toggle_text {
   font-size: 14px;
   font-weight: 100;
@@ -189,5 +179,24 @@ body {
   }
   .Background_video {
     display: none;
+  }
+  .searchBar input {
+    border: 0;
+    outline: 0;
+    color: #555;
+    padding: 10px 25px;
+    height: 40px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 0px;
+    font-size: 18px;
+  }
+  .searchBar button {
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    width: 40px !important;
+    height: 40px !important;
+    cursor: pointer;
   }
 }
